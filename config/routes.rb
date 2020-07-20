@@ -1,10 +1,4 @@
 Rails.application.routes.draw do
-  namespace :customers do
-    get 'customers/index'
-    get 'customers/show'
-    get 'customers/edit'
-    get 'customers/update'
-  end
   namespace :admins do
     get 'order_items/update'
   end
