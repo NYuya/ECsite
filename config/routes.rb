@@ -1,42 +1,42 @@
 Rails.application.routes.draw do
   namespace :admins do
-    put 'order_items/update'
+    post 'order_items/update'
   end
   namespace :admins do
     get 'orders/index'
     get 'orders/show'
-    put 'orders/update'
+    post 'orders/update'
   end
   namespace :admins do
     get 'customers/index'
     get 'customers/show'
-    get 'customers/edit'
-    put 'customers/update'
+    post 'customers/edit'
+    post 'customers/update'
   end
   namespace :admins do
     get 'genres/index'
-    put 'genres/update'
-    put 'genres/create'
-    get 'genres/edit'
+    post 'genres/update'
+    post 'genres/create'
+    post 'genres/edit'
   end
   namespace :admins do
     get 'items/index'
-    put 'items/update'
-    put 'items/create'
-    put 'items/new'
+    post 'items/update'
+    post 'items/create'
+    post 'items/new'
     get 'items/show'
-    get 'items/edit'
+    post 'items/edit'
   end
   namespace :customers do
     get 'cart_items/index'
-    put 'cart_items/create'
-    put 'cart_items/destroy'
-    put 'cart_items/update'
-    put 'cart_items/destroy_all'
+    post 'cart_items/create'
+    post 'cart_items/destroy'
+    post 'cart_items/update'
+    post 'cart_items/destroy_all'
   end
   namespace :customers do
-    get 'orders/new'
-    put 'orders/create'
+    post 'orders/new'
+    post 'orders/create'
     get 'orders/show'
     get 'orders/confirm'
     get 'orders/thanks'
@@ -44,10 +44,10 @@ Rails.application.routes.draw do
   end
   namespace :customers do
     get 'ships/index'
-    put 'ships/edit'
-    put 'ships/destroy'
-    put 'ships/update'
-    put 'ships/create'
+    post 'ships/edit'
+    post 'ships/destroy'
+    post 'ships/update'
+    post 'ships/create'
   end
   namespace :customers do
     get 'items/index'
