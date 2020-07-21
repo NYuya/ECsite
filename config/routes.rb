@@ -18,6 +18,7 @@ Rails.application.routes.draw do
     post 'genres/update'
     post 'genres/create'
     post 'genres/edit'
+    delete 'genres/destroy'
   end
   namespace :admins do
     get 'items/index'
@@ -26,13 +27,14 @@ Rails.application.routes.draw do
     post 'items/new'
     get 'items/show'
     post 'items/edit'
+    delete 'items/destroy'
   end
   namespace :customers do
     get 'cart_items/index'
     post 'cart_items/create'
-    post 'cart_items/destroy'
+    delete 'cart_items/destroy'
     post 'cart_items/update'
-    post 'cart_items/destroy_all'
+    delete 'cart_items/destroy_all'
   end
   namespace :customers do
     post 'orders/new'
@@ -45,7 +47,7 @@ Rails.application.routes.draw do
   namespace :customers do
     get 'ships/index'
     post 'ships/edit'
-    post 'ships/destroy'
+    delete 'ships/destroy'
     post 'ships/update'
     post 'ships/create'
   end
