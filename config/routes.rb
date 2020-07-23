@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
 
+
+  devise_for :customers, controllers: {
+    sessions: 'customers/sessions',
+    registrations: 'customers/registrations',
+    passwords: 'customers/passwords'
+  }
+
+
+
+  
   namespace :admins do
     get '/' => 'admins#top'
     resources :order_items, only: [:update]
