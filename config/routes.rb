@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
 
-
   devise_for :admins, controllers: {
     sessions: 'admins/sessions'
   }
-
-
 
 
   devise_for :customers, controllers: {
@@ -13,6 +10,12 @@ Rails.application.routes.draw do
     registrations: 'customers/registrations',
     passwords: 'customers/passwords'
   }
+
+  namespace :customers do
+      get 'confirm' => 'customers#confirm'
+      patch 'hide' => 'customers#hide'
+      put 'hide' => 'customers#hide'
+  end
 
 
 
