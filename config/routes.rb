@@ -4,22 +4,6 @@ Rails.application.routes.draw do
     sessions: 'admins/sessions'
   }
 
-
-  devise_for :customers, controllers: {
-    sessions: 'customers/sessions',
-    registrations: 'customers/registrations',
-    passwords: 'customers/passwords'
-  }
-
-  namespace :customers do
-      get 'confirm' => 'customers#confirm'
-      patch 'hide' => 'customers#hide'
-      put 'hide' => 'customers#hide'
-  end
-
-
-
-  
   namespace :admins do
     get '/' => 'admins#top'
     resources :order_items, only: [:update]
@@ -29,6 +13,21 @@ Rails.application.routes.draw do
     resources :items
   end
 
+  devise_for :customers, controllers: {
+    sessions: 'customers/sessions',
+    registrations: 'customers/registrations',
+    passwords: 'customers/passwords'
+  }
+
+  scope module: :customers do
+      resources :customers, only: [:show, :edit, :update]
+  end
+
+  namespace :customers do
+      get 'confirm' => 'customers#confirm'
+      patch 'hide' => 'customers#hide'
+      put 'hide' => 'customers#hide'
+  end
 
   resources :cart_items, only: [:index, :create, :update, :destroy]
   delete 'cart_items/destroy_all' => 'cart_items#destroy_all'
