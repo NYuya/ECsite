@@ -916,13 +916,23 @@ Processing by Customers::CustomersController#show as HTML
 Completed 200 OK in 8913ms (Views: 8863.6ms | ActiveRecord: 5.6ms)
 
 
-Completed 200 OK in 248ms (Views: 233.5ms | ActiveRecord: 1.9ms)
+Started GET "/customers/1" for 10.0.2.2 at 2020-07-28 15:30:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Customers::CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:3
+  Rendering customers/customers/show.html.erb within layouts/application
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/customers/show.html.erb:8
+  Rendered customers/customers/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 2672ms (Views: 2581.8ms | ActiveRecord: 8.7ms)
 
 
-tion (3.6ms)
-mers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
- "first_name"=>"太朗", "last_name_kana"=>"テスト", "first_name_kana"=>"タロウ", "email"=>"test1@test.com", "post_code"=>"", "address"=>"", "phone_number"=>""}, "commit"=>"編集内容を保存する", "id"=>"1"}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/customers/1/edit" for 10.0.2.2 at 2020-07-28 15:31:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
 Processing by Customers::CustomersController#edit as HTML
   Parameters: {"id"=>"1"}
   [1m[36mCustomer Load (1.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
@@ -1716,5 +1726,523 @@ Processing by Customers::CustomersController#show as HTML
   ↳ app/views/customers/customers/show.html.erb:8
   Rendered customers/customers/show.html.erb within layouts/application (4.6ms)
 Completed 200 OK in 240ms (Views: 221.3ms | ActiveRecord: 2.4ms)
+
+
+Completed 200 OK in 226ms (Views: 214.2ms | ActiveRecord: 1.5ms)
+
+
+tion (3.8ms)
+mers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:3
+  Rendering customers/customers/show.html.erb within layouts/application
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/customers/show.html.erb:8
+  Rendered customers/customers/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 601ms (Views: 589.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/customers/1" for 10.0.2.2 at 2020-07-29 12:38:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:3
+  Rendering customers/customers/show.html.erb within layouts/application
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/customers/show.html.erb:8
+  Rendered customers/customers/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 567ms (Views: 556.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/customers/1/edit" for 10.0.2.2 at 2020-07-29 12:38:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:7
+  Rendering customers/customers/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/customers/edit.html.erb:6
+  Rendered customers/customers/edit.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 226ms (Views: 214.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/customers/1/edit" for 10.0.2.2 at 2020-07-29 14:18:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Customers::CustomersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:7
+  Rendering customers/customers/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/customers/edit.html.erb:6
+  Rendered customers/customers/edit.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 1946ms (Views: 1898.9ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2020-07-29 14:18:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.4ms)
+Started GET "/items" for 10.0.2.2 at 2020-07-29 14:18:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.4ms)
+  [1m[36mCustomer Load (1.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 578ms (Views: 560.1ms | ActiveRecord: 1.5ms)
+
+
+  [1m[36mCustomer Load (2.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 563ms (Views: 550.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/customers/1" for 10.0.2.2 at 2020-07-29 14:18:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:3
+  Rendering customers/customers/show.html.erb within layouts/application
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/customers/show.html.erb:8
+  Rendered customers/customers/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 197ms (Views: 184.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/customers/1/edit" for 10.0.2.2 at 2020-07-29 14:18:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:7
+  Rendering customers/customers/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/customers/edit.html.erb:6
+  Rendered customers/customers/edit.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 257ms (Views: 243.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/customers/1/edit" for 10.0.2.2 at 2020-07-29 14:19:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:7
+  Rendering customers/customers/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/customers/edit.html.erb:6
+  Rendered customers/customers/edit.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 230ms (Views: 219.2ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/customers/1" for 10.0.2.2 at 2020-07-29 14:19:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LSQlPDq9CmvK3nInRiocFyOHcRUGXjDIo6cjHhrGjw5cYXoqhIzV7Uzq6Yx4c587E++tA+0Qx2Fh4p1+PwKJLw==", "customer"=>{"last_name"=>"テスト", "first_name"=>"太朗", "last_name_kana"=>"テスト", "first_name_kana"=>"タロウ", "email"=>"test1@test.com", "post_code"=>"", "address"=>"", "phone_number"=>""}, "commit"=>"編集内容を保存する", "id"=>"1"}
+  [1m[36mCustomer Load (1.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:11
+Unpermitted parameter: :email
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers/customers_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customers/customers_controller.rb:12
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:13
+Redirected to http://localhost:3000/customers/1
+Completed 302 Found in 11ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/customers/1" for 10.0.2.2 at 2020-07-29 14:19:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:3
+  Rendering customers/customers/show.html.erb within layouts/application
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/customers/show.html.erb:8
+  Rendered customers/customers/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 230ms (Views: 214.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/customers/1/edit" for 10.0.2.2 at 2020-07-29 14:19:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:7
+  Rendering customers/customers/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/customers/edit.html.erb:6
+  Rendered customers/customers/edit.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 256ms (Views: 239.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/customers/1/edit" for 10.0.2.2 at 2020-07-29 14:19:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:7
+  Rendering customers/customers/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/customers/edit.html.erb:6
+  Rendered customers/customers/edit.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 243ms (Views: 228.6ms | ActiveRecord: 1.7ms)
+
+
+Started PATCH "/customers/1" for 10.0.2.2 at 2020-07-29 14:20:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BoeabiBsY4UB/03MLxcAEpFnuFji7qZISVPAS++j39h3wsV4nl28A4fL1mcRToM+oQ9kTgmgUeGLFn4rymfZ+Q==", "customer"=>{"last_name"=>"テスト", "first_name"=>"太朗", "last_name_kana"=>"テスト", "first_name_kana"=>"タロウ", "email"=>"test1@test.com", "post_code"=>"11111111", "address"=>"大阪", "phone_number"=>"09011111111"}, "commit"=>"編集内容を保存する", "id"=>"1"}
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:11
+Unpermitted parameter: :email
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers/customers_controller.rb:12
+  [1m[36mCustomer Update (8.1ms)[0m  [1m[33mUPDATE "customers" SET "post_code" = ?, "address" = ?, "phone_number" = ?, "updated_at" = ? WHERE "customers"."id" = ?[0m  [["post_code", "11111111"], ["address", "大阪"], ["phone_number", "09011111111"], ["updated_at", "2020-07-29 14:20:05.658539"], ["id", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:12
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customers/customers_controller.rb:12
+  [1m[36mCustomer Load (1.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:13
+Redirected to http://localhost:3000/customers/1
+Completed 302 Found in 24ms (ActiveRecord: 12.4ms)
+
+
+Started GET "/customers/1" for 10.0.2.2 at 2020-07-29 14:20:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:3
+  Rendering customers/customers/show.html.erb within layouts/application
+  [1m[36mCustomer Load (1.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/customers/show.html.erb:8
+  Rendered customers/customers/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 276ms (Views: 263.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/ships" for 10.0.2.2 at 2020-07-29 14:20:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShipsController#index as HTML
+  Rendering ships/index.html.erb within layouts/application
+  Rendered ships/index.html.erb within layouts/application (0.4ms)
+  [1m[36mCustomer Load (1.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 208ms (Views: 196.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-07-29 14:20:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#top as HTML
+  Rendering items/top.html.erb within layouts/application
+  Rendered items/top.html.erb within layouts/application (0.4ms)
+  [1m[36mCustomer Load (1.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 212ms (Views: 199.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/customers/1" for 10.0.2.2 at 2020-07-29 14:20:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (2.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:3
+  Rendering customers/customers/show.html.erb within layouts/application
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/customers/show.html.erb:8
+  Rendered customers/customers/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 248ms (Views: 225.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/customers/1/edit" for 10.0.2.2 at 2020-07-29 14:20:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:7
+  Rendering customers/customers/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/customers/edit.html.erb:6
+  Rendered customers/customers/edit.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 226ms (Views: 213.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/customers/1/edit" for 10.0.2.2 at 2020-07-29 14:20:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:7
+  Rendering customers/customers/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/customers/edit.html.erb:6
+  Rendered customers/customers/edit.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 239ms (Views: 224.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/customers/1" for 10.0.2.2 at 2020-07-29 14:20:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (1.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:3
+  Rendering customers/customers/show.html.erb within layouts/application
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/customers/show.html.erb:8
+  Rendered customers/customers/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 269ms (Views: 256.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/customers/1" for 10.0.2.2 at 2020-07-29 14:31:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (3.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:3
+  Rendering customers/customers/show.html.erb within layouts/application
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/customers/show.html.erb:8
+  Rendered customers/customers/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 397ms (Views: 381.4ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/customers/1/edit" for 10.0.2.2 at 2020-07-29 14:31:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:7
+  Rendering customers/customers/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/customers/edit.html.erb:6
+  Rendered customers/customers/edit.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 239ms (Views: 223.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/customers/1/edit" for 10.0.2.2 at 2020-07-29 14:43:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:7
+  Rendering customers/customers/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (1.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/customers/edit.html.erb:5
+  Rendered customers/customers/edit.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 297ms (Views: 283.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-07-29 14:43:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#top as HTML
+  Rendering items/top.html.erb within layouts/application
+  Rendered items/top.html.erb within layouts/application (0.3ms)
+  [1m[36mCustomer Load (3.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 337ms (Views: 318.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/customers/1" for 10.0.2.2 at 2020-07-29 14:43:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:3
+  Rendering customers/customers/show.html.erb within layouts/application
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/customers/show.html.erb:8
+  Rendered customers/customers/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 250ms (Views: 233.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/customers/1/edit" for 10.0.2.2 at 2020-07-29 14:43:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:7
+  Rendering customers/customers/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (1.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/customers/edit.html.erb:5
+  Rendered customers/customers/edit.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 210ms (Views: 193.8ms | ActiveRecord: 2.3ms)
+
+
+Started PATCH "/customers/1" for 10.0.2.2 at 2020-07-29 14:43:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PYHiL4mxEOhht3nSO5zS67t206wuxWnw4D4kSwNUHqFMxL05N4DPbueD4nkFxVHHix4PusWLnlkie5orJpAYgA==", "customer"=>{"last_name"=>"テスト", "first_name"=>"太朗", "last_name_kana"=>"テスト", "first_name_kana"=>"タロウ", "email"=>"test1@test.com", "post_code"=>"11111111", "address"=>"大阪", "phone_number"=>"09011111111"}, "commit"=>"編集内容を保存する", "id"=>"1"}
+  [1m[36mCustomer Load (3.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:11
+Unpermitted parameter: :email
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers/customers_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customers/customers_controller.rb:12
+  [1m[36mCustomer Load (1.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:13
+Redirected to http://localhost:3000/customers/1
+Completed 302 Found in 16ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/customers/1" for 10.0.2.2 at 2020-07-29 14:43:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:3
+  Rendering customers/customers/show.html.erb within layouts/application
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/customers/show.html.erb:8
+  Rendered customers/customers/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 264ms (Views: 249.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/customers/1" for 10.0.2.2 at 2020-07-29 14:43:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:3
+  Rendering customers/customers/show.html.erb within layouts/application
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/customers/show.html.erb:8
+  Rendered customers/customers/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 249ms (Views: 236.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/customers/1/edit" for 10.0.2.2 at 2020-07-29 14:43:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:7
+  Rendering customers/customers/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/customers/edit.html.erb:5
+  Rendered customers/customers/edit.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 271ms (Views: 247.7ms | ActiveRecord: 2.0ms)
+
+
+Started PATCH "/customers/1" for 10.0.2.2 at 2020-07-29 14:43:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TAGPWECHZdbh7of8xo6ys6iPWQWrVE6rvLNWg2r6f5E9RNBO/ra6UGfaHFf41zGfmOeFE0AauQJ+9ujjTz55sA==", "customer"=>{"last_name"=>"テスト", "first_name"=>"太朗", "last_name_kana"=>"テスト", "first_name_kana"=>"タロウ", "email"=>"test1@test.com", "post_code"=>"11111111", "address"=>"大阪", "phone_number"=>"09012345678"}, "commit"=>"編集内容を保存する", "id"=>"1"}
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:11
+Unpermitted parameter: :email
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers/customers_controller.rb:12
+  [1m[36mCustomer Update (3.8ms)[0m  [1m[33mUPDATE "customers" SET "phone_number" = ?, "updated_at" = ? WHERE "customers"."id" = ?[0m  [["phone_number", "09012345678"], ["updated_at", "2020-07-29 14:43:41.669544"], ["id", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:12
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customers/customers_controller.rb:12
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:13
+Redirected to http://localhost:3000/customers/1
+Completed 302 Found in 20ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/customers/1" for 10.0.2.2 at 2020-07-29 14:43:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:3
+  Rendering customers/customers/show.html.erb within layouts/application
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/customers/show.html.erb:8
+  Rendered customers/customers/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 221ms (Views: 206.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/customers/1" for 10.0.2.2 at 2020-07-29 14:44:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:3
+  Rendering customers/customers/show.html.erb within layouts/application
+  [1m[36mCustomer Load (1.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/customers/show.html.erb:8
+  Rendered customers/customers/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 184ms (Views: 172.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-07-29 14:44:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#top as HTML
+  Rendering items/top.html.erb within layouts/application
+  Rendered items/top.html.erb within layouts/application (0.5ms)
+  [1m[36mCustomer Load (1.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 267ms (Views: 253.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/customers/1" for 10.0.2.2 at 2020-07-29 14:44:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (1.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:3
+  Rendering customers/customers/show.html.erb within layouts/application
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/customers/show.html.erb:8
+  Rendered customers/customers/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 316ms (Views: 273.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/customers/1/edit" for 10.0.2.2 at 2020-07-29 14:44:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:7
+  Rendering customers/customers/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (1.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/customers/edit.html.erb:5
+  Rendered customers/customers/edit.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 222ms (Views: 202.1ms | ActiveRecord: 2.4ms)
+
+
+Started PATCH "/customers/1" for 10.0.2.2 at 2020-07-29 14:44:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qa5HlvMaueVGeo9FakMDqjRVLcZjuJYKQQkiAHxkCI7Y6xiATStmY8BOFO5UGoCGBD3x0Ij2YaODTJxgWaAOrw==", "customer"=>{"last_name"=>"テスト", "first_name"=>"太朗", "last_name_kana"=>"テスト", "first_name_kana"=>"タロウ", "email"=>"test1@test.com", "post_code"=>"1234567", "address"=>"大阪", "phone_number"=>"09012345678"}, "commit"=>"編集内容を保存する", "id"=>"1"}
+  [1m[36mCustomer Load (1.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:11
+Unpermitted parameter: :email
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers/customers_controller.rb:12
+  [1m[36mCustomer Update (3.7ms)[0m  [1m[33mUPDATE "customers" SET "post_code" = ?, "updated_at" = ? WHERE "customers"."id" = ?[0m  [["post_code", "1234567"], ["updated_at", "2020-07-29 14:44:22.396351"], ["id", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:12
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customers/customers_controller.rb:12
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:13
+Redirected to http://localhost:3000/customers/1
+Completed 302 Found in 27ms (ActiveRecord: 9.4ms)
+
+
+Started GET "/customers/1" for 10.0.2.2 at 2020-07-29 14:44:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:3
+  Rendering customers/customers/show.html.erb within layouts/application
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/customers/show.html.erb:8
+  Rendered customers/customers/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 217ms (Views: 204.5ms | ActiveRecord: 1.9ms)
 
 
