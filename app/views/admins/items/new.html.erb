@@ -1,2 +1,46 @@
-<h1>Admins::Items#new</h1>
-<p>Find me in app/views/admins/items/new.html.erb</p>
+<h1>商品新規登録画面</h1>
+<div class="row">
+    <%= form_for(@item,url:admins_items_path) do |f| %>
+        <div class="col-xs-6">
+            <% if @item.errors.any? %>
+                <h3><%= @item.errors.count %>つ空白があります</h3><!--エラーメッセ-->
+                <ul>
+                    <% @item.errors.full_messages.each do |message| %>
+                        <li><%= message %></li>
+                    <% end %>
+                </ul>
+            <% end %>
+            <div class="field">
+                <%= f.label :image, "画像選択", class: "image_input_btn btn-primary" %>
+                <%= f.attachment_field :image, class: "image_form" %>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <table class="table table-borderless">
+                <tr>
+                    <th>商品名</th><td><%= f.text_field :name %></td>
+                </tr>
+                <tr>
+                    <th>商品説明文</th><td><%= f.text_area :description %></td>
+                </tr>
+                <tr>
+                    <th>ジャンル</th><td>
+                        プロパティ名, オブジェクトの配列, value属性の項目, テキストの項目 [, オプション])
+                        <%= f.collection_select :genre_id, @genres, :id, :name %></td>
+                </tr>
+                <tr>
+                    <th>税抜き価格</th><td><%= f.number_field :price %></td>
+                </tr>
+                <tr>
+                    <th>販売ステータス</th>
+                    <td><%= f.select :is_sale_status,[['販売中',true],['売り切れ',false]],{include_blank: '--選択してください--'},:class=> 'item_f.select' %></td>
+                </tr>
+            </table>
+        </div>
+        <div class="row">
+            <button type="submit" class="btn btn-primary btn-lg pull-right">新規登録</button>
+        </div>
+    <% end %>
+</div>
+
+
