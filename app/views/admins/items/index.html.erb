@@ -1,30 +1,32 @@
-<div class="row"><h2>商品一覧画面</h2></div>
-<div class="table">
-    <a href="items/new" class="btn-circle-3d pull-right" ><span style="font-size:2em;">＋</span></a>
-    <table class="table table-hover table-inverse">
-        <thead>
-            <tr>
-                <th>商品ID</th>
-                <th>商品名</th>
-                <th>税抜き価格</th>
-                <th>ジャンル</th>
-                <th>ステータス</th>
-            </tr>
-        </thead>
-        <tbody>
-            <% @search_items.each do |item| %>
-                <tr>
-                    <th><%=item.id%></th>
-                    <td><%= link_to item.name, admins_item_path(item.id) %></td>
-                    <td><%= item.price %></td>
-                    <td><%= item.genre.name %></td>
-                    <td><%= item.is_sale_status  == false ? "販売停止中" : "販売中"%></td>
-                </tr>
-            <% end %>
-        </tbody>
-    </table>
-</div>
-<div class='p-top__paginate'>
-    <%= paginate @items %>
-</div>
+<h2>商品一覧画面</h2>
+<table class="table table-hover">
+	<thead class="thead-lignt">
+		<tr>
+			<th>会員ID</th>
+			<th>クリエイトタイム</th>
+			<th>氏名</th>
+			<th>メールアドレス</th>
+			
+			<th>ステータス</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @items.each do |item| %>
+			<tr>
+				<td><%= item.id %></td>
+				<td><%= item.created_at %></td>
+				<td><%= link_to item.name, admins_item_path(item.id) %></td>
+				<td><%= item.description %></td>
+				<td><%= item.price %></td>
+				<td>
+					<% if item.is_sale_status == false %>
+						<span class="text-success">販売中</span>
+					<% else %>
+						<span class="text-danger">販売停止中</span>
+					<% end %>
+				</td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
 
