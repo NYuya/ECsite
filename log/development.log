@@ -2968,3 +2968,321 @@ Processing by ItemsController#top as HTML
 Completed 200 OK in 420ms (Views: 408.1ms | ActiveRecord: 1.4ms)
 
 
+Completed 200 OK in 169ms (Views: 157.4ms | ActiveRecord: 1.4ms)
+
+
+ "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+ ["LIMIT",[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Admins::CustomersController#index as HTML
+  Rendering admins/customers/index.html.erb within layouts/application
+  Rendered admins/customers/index.html.erb within layouts/application (1.0ms)
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+Completed 200 OK in 2026ms (Views: 2001.3ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/admins/orders" for 10.0.2.2 at 2020-08-02 14:44:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::OrdersController#index as HTML
+  Rendering admins/orders/index.html.erb within layouts/application
+  Rendered admins/orders/index.html.erb within layouts/application (0.4ms)
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+Completed 200 OK in 210ms (Views: 199.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admins/items" for 10.0.2.2 at 2020-08-02 14:44:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::ItemsController#index as HTML
+  Rendering admins/items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/admins/items/index.html.erb:14
+  Rendered admins/items/index.html.erb within layouts/application (4.2ms)
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+Completed 200 OK in 206ms (Views: 187.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/admins/new" for 10.0.2.2 at 2020-08-02 14:44:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/admins/new"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admins/admins/items/new" for 10.0.2.2 at 2020-08-02 14:45:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/admins/admins/items/new"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admins/items/new" for 10.0.2.2 at 2020-08-02 14:45:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::ItemsController#new as HTML
+  Rendering admins/items/new.html.erb within layouts/application
+  Rendered admins/items/new.html.erb within layouts/application (31.3ms)
+Completed 500 Internal Server Error in 91ms (ActiveRecord: 2.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `image_attachment_definition' for #<Item:0x00000000098a30c8>):
+    12:             <% end %>
+    13:             <div class="field">
+    14:                 <%= f.label :image, "画像選択", class: "image_input_btn btn-primary" %>
+    15:                 <%= f.attachment_field :image, class: "image_form" %>
+    16:             </div>
+    17:         </div>
+    18:         <div class="col-xs-6">
+  
+app/views/admins/items/new.html.erb:15:in `block in _app_views_admins_items_new_html_erb___1663442495389492490_70274456656020'
+app/views/admins/items/new.html.erb:3:in `_app_views_admins_items_new_html_erb___1663442495389492490_70274456656020'
+Started GET "/admins/customers" for 10.0.2.2 at 2020-08-02 14:51:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::CustomersController#index as HTML
+  Rendering admins/customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/views/admins/customers/index.html.erb:14
+  Rendered admins/customers/index.html.erb within layouts/application (5.1ms)
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+Completed 200 OK in 259ms (Views: 245.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-08-02 14:51:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#top as HTML
+  Rendering items/top.html.erb within layouts/application
+  Rendered items/top.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 226ms (Views: 217.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/sign_up" for 10.0.2.2 at 2020-08-02 14:51:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::RegistrationsController#new as HTML
+  Rendering customers/registrations/new.html.erb within layouts/application
+  Rendered customers/shared/_error_messages.html.erb (0.6ms)
+  Rendered customers/shared/_links.html.erb (1.0ms)
+  Rendered customers/registrations/new.html.erb within layouts/application (549.6ms)
+Completed 200 OK in 731ms (Views: 717.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/customers" for 10.0.2.2 at 2020-08-02 14:52:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Otf8hMyrTGjeH8BbwDzS3rdxLq3yukraOnkfI8l+SnQ12WQVEe1VOcCeeBnLsZSUYu9R1mhyP6ZFiBCxqDKsFQ==", "customer"=>{"email"=>"test1@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCustomer Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "test1@test.com"], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCustomer Create (2.9ms)[0m  [1m[32mINSERT INTO "customers" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "test1@test.com"], ["encrypted_password", "$2a$12$1w/RHFRAuO74UCXYWWlVku7w/TCodlxyK2NKE8aOwxCMgw22z4xB."], ["created_at", "2020-08-02 14:52:02.158683"], ["updated_at", "2020-08-02 14:52:02.158683"]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 324ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-08-02 14:52:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#top as HTML
+  Rendering items/top.html.erb within layouts/application
+  Rendered items/top.html.erb within layouts/application (0.4ms)
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 190ms (Views: 178.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/customers/1" for 10.0.2.2 at 2020-08-02 14:52:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:3
+  Rendering customers/customers/show.html.erb within layouts/application
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/customers/show.html.erb:8
+  Rendered customers/customers/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 155ms (Views: 144.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/customers/1/edit" for 10.0.2.2 at 2020-08-02 14:52:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:7
+  Rendering customers/customers/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/customers/edit.html.erb:5
+  Rendered customers/customers/edit.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 166ms (Views: 153.2ms | ActiveRecord: 1.6ms)
+
+
+Started PATCH "/customers/1" for 10.0.2.2 at 2020-08-02 14:52:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pMikdlADfE4xQlxCAQ3UOLZer/NpQy99w4MR7hHoehmVnKR6Wok62j7+ADYrMSFSXAMd9zLMpBzME1JlhT6tXw==", "customer"=>{"last_name"=>"テスト", "first_name"=>"太朗", "last_name_kana"=>"テスト", "first_name_kana"=>"タロウ", "email"=>"test1@test.com", "post_code"=>"11111111", "address"=>"Osaka", "phone_number"=>"090"}, "commit"=>"編集内容を保存する", "id"=>"1"}
+  [1m[36mCustomer Load (1.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:11
+Unpermitted parameter: :email
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers/customers_controller.rb:12
+  [1m[36mCustomer Update (3.4ms)[0m  [1m[33mUPDATE "customers" SET "last_name" = ?, "first_name" = ?, "last_name_kana" = ?, "first_name_kana" = ?, "post_code" = ?, "address" = ?, "phone_number" = ?, "updated_at" = ? WHERE "customers"."id" = ?[0m  [["last_name", "テスト"], ["first_name", "太朗"], ["last_name_kana", "テスト"], ["first_name_kana", "タロウ"], ["post_code", "11111111"], ["address", "Osaka"], ["phone_number", "090"], ["updated_at", "2020-08-02 14:52:43.561195"], ["id", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:12
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customers/customers_controller.rb:12
+  [1m[36mCustomer Load (1.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:13
+Redirected to http://localhost:3000/customers/1
+Completed 302 Found in 51ms (ActiveRecord: 15.4ms)
+
+
+Started GET "/customers/1" for 10.0.2.2 at 2020-08-02 14:52:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (1.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/customers_controller.rb:3
+  Rendering customers/customers/show.html.erb within layouts/application
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/customers/show.html.erb:8
+  Rendered customers/customers/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 301ms (Views: 286.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/admins/customers" for 10.0.2.2 at 2020-08-02 14:52:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::CustomersController#index as HTML
+  Rendering admins/customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/views/admins/customers/index.html.erb:14
+  Rendered admins/customers/index.html.erb within layouts/application (5.0ms)
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+Completed 200 OK in 245ms (Views: 232.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/admins/customers" for 10.0.2.2 at 2020-08-02 14:53:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::CustomersController#index as HTML
+  Rendering admins/customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/views/admins/customers/index.html.erb:14
+  Rendered admins/customers/index.html.erb within layouts/application (2.8ms)
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+Completed 200 OK in 234ms (Views: 211.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/admins/customers" for 10.0.2.2 at 2020-08-02 14:53:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::CustomersController#index as HTML
+  Rendering admins/customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/views/admins/customers/index.html.erb:14
+  Rendered admins/customers/index.html.erb within layouts/application (2.7ms)
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+Completed 200 OK in 222ms (Views: 208.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admins/customers" for 10.0.2.2 at 2020-08-02 14:53:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::CustomersController#index as HTML
+  Rendering admins/customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/views/admins/customers/index.html.erb:14
+  Rendered admins/customers/index.html.erb within layouts/application (2.9ms)
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+Completed 200 OK in 173ms (Views: 161.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admins/customers" for 10.0.2.2 at 2020-08-02 14:54:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::CustomersController#index as HTML
+  Rendering admins/customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/views/admins/customers/index.html.erb:14
+  Rendered admins/customers/index.html.erb within layouts/application (2.8ms)
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+Completed 200 OK in 179ms (Views: 168.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admins/customers" for 10.0.2.2 at 2020-08-02 14:54:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::CustomersController#index as HTML
+  Rendering admins/customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (1.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/views/admins/customers/index.html.erb:14
+  Rendered admins/customers/index.html.erb within layouts/application (4.3ms)
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+Completed 200 OK in 182ms (Views: 171.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/admins/items" for 10.0.2.2 at 2020-08-02 14:54:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::ItemsController#index as HTML
+  Rendering admins/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/admins/items/index.html.erb:14
+  Rendered admins/items/index.html.erb within layouts/application (2.2ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+Completed 200 OK in 169ms (Views: 157.4ms | ActiveRecord: 1.4ms)
+
+
