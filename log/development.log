@@ -2968,11 +2968,9 @@ Processing by ItemsController#top as HTML
 Completed 200 OK in 420ms (Views: 408.1ms | ActiveRecord: 1.4ms)
 
 
-Completed 200 OK in 169ms (Views: 157.4ms | ActiveRecord: 1.4ms)
-
-
- "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
- ["LIMIT",[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/admins/customers" for 10.0.2.2 at 2020-08-02 14:43:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
 Processing by Admins::CustomersController#index as HTML
   Rendering admins/customers/index.html.erb within layouts/application
@@ -3284,5 +3282,329 @@ Processing by Admins::ItemsController#index as HTML
   [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
   ↳ app/views/layouts/application.html.erb:29
 Completed 200 OK in 169ms (Views: 157.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-08-03 06:15:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#top as HTML
+  Rendering items/top.html.erb within layouts/application
+  Rendered items/top.html.erb within layouts/application (1.8ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+Completed 200 OK in 3748ms (Views: 3693.1ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/admins/" for 10.0.2.2 at 2020-08-03 06:16:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (uninitialized constant Admins::AdminsController):
+  
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `block in load_missing_constant'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/active_support.rb:9:in `without_bootsnap_cache'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `rescue in load_missing_constant'
+bootsnap (1.4.6) lib/bootsnap/load_path_cache/core_ext/active_support.rb:59:in `load_missing_constant'
+activesupport (5.2.4.3) lib/active_support/inflector/methods.rb:285:in `const_get'
+activesupport (5.2.4.3) lib/active_support/inflector/methods.rb:285:in `block in constantize'
+activesupport (5.2.4.3) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.4.3) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.4.3) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.4.3) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.4.3) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.4.3) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.4.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.4.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 10.0.2.2 at 2020-08-03 06:16:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#top as HTML
+  Rendering items/top.html.erb within layouts/application
+  Rendered items/top.html.erb within layouts/application (0.4ms)
+  [1m[36mAdmin Load (1.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+Completed 200 OK in 554ms (Views: 531.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admins/items" for 10.0.2.2 at 2020-08-03 06:16:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::ItemsController#index as HTML
+  Rendering admins/items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/admins/items/index.html.erb:14
+  Rendered admins/items/index.html.erb within layouts/application (7.7ms)
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+Completed 200 OK in 342ms (Views: 324.9ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/admins/items/new" for 10.0.2.2 at 2020-08-03 06:16:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::ItemsController#new as HTML
+  Rendering admins/items/new.html.erb within layouts/application
+  Rendered admins/items/new.html.erb within layouts/application (47.2ms)
+Completed 500 Internal Server Error in 109ms (ActiveRecord: 2.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `image_attachment_definition' for #<Item:0x00007fa795ab0ee8>):
+    12:             <% end %>
+    13:             <div class="field">
+    14:                 <%= f.label :image, "画像選択", class: "image_input_btn btn-primary" %>
+    15:                 <%= f.attachment_field :image, class: "image_form" %>
+    16:             </div>
+    17:         </div>
+    18:         <div class="col-xs-6">
+  
+app/views/admins/items/new.html.erb:15:in `block in _app_views_admins_items_new_html_erb___3160144794994525294_70178873345480'
+app/views/admins/items/new.html.erb:3:in `_app_views_admins_items_new_html_erb___3160144794994525294_70178873345480'
+Started GET "/admins/items/new" for 10.0.2.2 at 2020-08-03 06:16:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::ItemsController#new as HTML
+  Rendering admins/items/new.html.erb within layouts/application
+  Rendered admins/items/new.html.erb within layouts/application (48.1ms)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `image_attachment_definition' for #<Item:0x00007fa795f63558>):
+    12:             <% end %>
+    13:             <div class="field">
+    14:                 <%= f.label :image, "画像選択", class: "image_input_btn btn-primary" %>
+    15:                 <%= f.attachment_field :image, class: "image_form" %>
+    16:             </div>
+    17:         </div>
+    18:         <div class="col-xs-6">
+  
+app/views/admins/items/new.html.erb:15:in `block in _app_views_admins_items_new_html_erb___3160144794994525294_70178876100440'
+app/views/admins/items/new.html.erb:3:in `_app_views_admins_items_new_html_erb___3160144794994525294_70178876100440'
+Started GET "/admins/items/new" for 10.0.2.2 at 2020-08-03 06:20:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Admins::ItemsController#new as HTML
+  Rendering admins/items/new.html.erb within layouts/application
+  Rendered admins/items/new.html.erb within layouts/application (43.7ms)
+Completed 500 Internal Server Error in 115ms (ActiveRecord: 2.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `image_attachment_definition' for #<Item:0x0000000007979c88>):
+    12:             <% end %>
+    13:             <div class="field">
+    14:                 <%= f.label :image, "画像選択", class: "image_input_btn btn-primary" %>
+    15:                 <%= f.attachment_field :image, class: "image_form" %>
+    16:             </div>
+    17:         </div>
+    18:         <div class="col-xs-6">
+  
+app/views/admins/items/new.html.erb:15:in `block in _app_views_admins_items_new_html_erb__57339086281691172_62346420'
+app/views/admins/items/new.html.erb:3:in `_app_views_admins_items_new_html_erb__57339086281691172_62346420'
+Started GET "/admins/items/new" for 10.0.2.2 at 2020-08-03 06:21:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::ItemsController#new as HTML
+  Rendering admins/items/new.html.erb within layouts/application
+  Rendered admins/items/new.html.erb within layouts/application (34.7ms)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `image_id_attachment_definition' for #<Item:0x000000000709cdb8>
+Did you mean?  image_id_in_database):
+    12:             <% end %>
+    13:             <div class="field">
+    14:                 <%= f.label :image, "画像選択", class: "image_input_btn btn-primary" %>
+    15:                 <%= f.attachment_field :image_id, class: "image_form" %>
+    16:             </div>
+    17:         </div>
+    18:         <div class="col-xs-6">
+  
+app/views/admins/items/new.html.erb:15:in `block in _app_views_admins_items_new_html_erb__57339086281691172_58985700'
+app/views/admins/items/new.html.erb:3:in `_app_views_admins_items_new_html_erb__57339086281691172_58985700'
+Started GET "/admins/items/new" for 10.0.2.2 at 2020-08-03 06:21:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::ItemsController#new as HTML
+  Rendering admins/items/new.html.erb within layouts/application
+  Rendered admins/items/new.html.erb within layouts/application (35.7ms)
+Completed 500 Internal Server Error in 117ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `image_attachment_definition' for #<Item:0x00000000074c5f20>):
+    12:             <% end %>
+    13:             <div class="field">
+    14:                 <%= f.label :image, "画像選択", class: "image_input_btn btn-primary" %>
+    15:                 <%= f.attachment_field :image, class: "image_form" %>
+    16:             </div>
+    17:         </div>
+    18:         <div class="col-xs-6">
+  
+app/views/admins/items/new.html.erb:15:in `block in _app_views_admins_items_new_html_erb__57339086281691172_61219780'
+app/views/admins/items/new.html.erb:3:in `_app_views_admins_items_new_html_erb__57339086281691172_61219780'
+Started GET "/admins/items/new" for 10.0.2.2 at 2020-08-03 06:23:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::ItemsController#new as HTML
+  Rendering admins/items/new.html.erb within layouts/application
+  [1m[36mGenre Load (0.7ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/admins/items/new.html.erb:29
+  Rendered admins/items/new.html.erb within layouts/application (36.7ms)
+  [1m[36mAdmin Load (1.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+Completed 200 OK in 1905ms (Views: 1892.6ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/admins/items/new" for 10.0.2.2 at 2020-08-03 06:24:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::ItemsController#new as HTML
+  Rendering admins/items/new.html.erb within layouts/application
+  [1m[36mGenre Load (0.6ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/admins/items/new.html.erb:29
+  Rendered admins/items/new.html.erb within layouts/application (9.6ms)
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+Completed 200 OK in 317ms (Views: 305.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admins/items/new" for 10.0.2.2 at 2020-08-03 06:27:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::ItemsController#new as HTML
+  Rendering admins/items/new.html.erb within layouts/application
+  [1m[36mGenre Load (0.6ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/admins/items/new.html.erb:33
+  Rendered admins/items/new.html.erb within layouts/application (4.3ms)
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+Completed 200 OK in 282ms (Views: 272.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admins/items/new" for 10.0.2.2 at 2020-08-03 06:28:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::ItemsController#new as HTML
+  Rendering admins/items/new.html.erb within layouts/application
+  [1m[36mGenre Load (3.9ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/admins/items/new.html.erb:28
+  Rendered admins/items/new.html.erb within layouts/application (26.7ms)
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+Completed 200 OK in 393ms (Views: 380.2ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/admins/items/new" for 10.0.2.2 at 2020-08-03 06:28:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::ItemsController#new as HTML
+  Rendering admins/items/new.html.erb within layouts/application
+  Rendered admins/items/new.html.erb within layouts/application (58.8ms)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `image_attachment_definition' for #<Item:0x00007f1614487318>):
+    12:             <% end %>
+    13:             <div class="field">
+    14:                 <%= f.label :image, "画像選択", class: "image_input_btn btn-primary" %>
+    15:                 <%= f.attachment_field :image, class: "image_form" %>
+    16:             </div>
+    17:         </div>
+    18:         <div class="col-xs-6">
+  
+app/views/admins/items/new.html.erb:15:in `block in _app_views_admins_items_new_html_erb__57339086281691172_69866403147460'
+app/views/admins/items/new.html.erb:3:in `_app_views_admins_items_new_html_erb__57339086281691172_69866403147460'
+Started GET "/admins/items/new" for 10.0.2.2 at 2020-08-03 06:32:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::ItemsController#new as HTML
+  Rendering admins/items/new.html.erb within layouts/application
+  Rendered admins/items/new.html.erb within layouts/application (32.7ms)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `image_attachment_definition' for #<Item:0x00007f1620231580>):
+    12:             <% end %>
+    13:             <div class="field">
+    14:                 <%= f.label :image, "画像選択", class: "image_input_btn btn-primary" %>
+    15:                 <%= f.attachment_field :image, class: "image_form" %>
+    16:             </div>
+    17:         </div>
+    18:         <div class="col-xs-6">
+  
+app/views/admins/items/new.html.erb:15:in `block in _app_views_admins_items_new_html_erb__57339086281691172_63553340'
+app/views/admins/items/new.html.erb:3:in `_app_views_admins_items_new_html_erb__57339086281691172_63553340'
+Started GET "/admins/items/new" for 10.0.2.2 at 2020-08-03 06:33:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::ItemsController#new as HTML
+  Rendering admins/items/new.html.erb within layouts/application
+  Rendered admins/items/new.html.erb within layouts/application (33.8ms)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `image_attachment_definition' for #<Item:0x00007f1614aa6938>):
+    12:             <% end %>
+    13:             <div class="field">
+    14:                 <%= f.label :image, "画像選択", class: "image_input_btn btn-primary" %>
+    15:                 <%= f.attachment_field :image %>
+    16:             </div>
+    17:         </div>
+    18:         <div class="col-xs-6">
+  
+app/views/admins/items/new.html.erb:15:in `block in _app_views_admins_items_new_html_erb__57339086281691172_69866406357440'
+app/views/admins/items/new.html.erb:3:in `_app_views_admins_items_new_html_erb__57339086281691172_69866406357440'
+Started GET "/admins/items/new" for 10.0.2.2 at 2020-08-03 06:35:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Admins::ItemsController#new as HTML
+  Rendering admins/items/new.html.erb within layouts/application
+  [1m[36mGenre Load (1.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/admins/items/new.html.erb:28
+  Rendered admins/items/new.html.erb within layouts/application (16.3ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+Completed 200 OK in 2006ms (Views: 1876.5ms | ActiveRecord: 6.9ms)
 
 

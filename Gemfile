@@ -71,8 +71,8 @@ gem 'faker' #ランダム値の生成
 gem 'shoulda-matchers'
 gem 'rails-controller-testing'
 gem 'font-awesome-sass'
-gem "refile", require: "refile/rails", github: 'manfe/refile'
-gem "refile-mini_magick"
+gem "refile", require: "refile/rails", github: 'manfe/refile' # 画像投稿用gem
+gem "refile-mini_magick" # 画像加工用（サイズ調整など）gem
 gem 'hirb'
 gem 'hirb-unicode'
 gem 'kaminari'
