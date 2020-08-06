@@ -46,9 +46,9 @@
 				<td><%= link_to genre.name, edit_admins_genre_path(genre.id) %></td>
 				<td>
 					<% if genre.is_active == false %>
-						<span class="text-success">公開中</span>
+						<span class="text-success">有効</span>
 					<% else %>
-						<span class="text-danger">停止中</span>
+						<span class="text-danger">無効</span>
 					<% end %>
 				</td>
                 <td><%= link_to "編集する", edit_admins_genre_path(genre.id) ,class: "btn btn-primary"%></td>
