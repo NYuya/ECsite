@@ -23,17 +23,23 @@ class Admins::ItemsController < ApplicationController
   end
 
   def new
-    @item =Item.new
+    @item = Item.new
     @genres = Genre.all
   end
 
   def show
-    @item=Item.find(params[:id])
+    @item = Item.find(params[:id])
     @tax = @item.price.to_i*1.1
   end
 
   def edit
-    @item=Item.find(params[:id])
+    @item = Item.find(params[:id])
+  end
+
+  def destroy
+    @item = Item.find(params[:id])
+    @item.destroy
+    redirect_to admins_items_path, notice: "successfully delete item!"
   end
 
   private
