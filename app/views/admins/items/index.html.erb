@@ -21,10 +21,10 @@
 				<td><%= item.description %></td>
 				<td><%= item.price %></td>
 				<td>
-					<% if item.is_sale_status == false %>
-						<span class="text-success">販売中</span>
-					<% else %>
+					<% if item.is_sale_status == false %>						
 						<span class="text-danger">販売停止中</span>
+					<% else %>
+						<span class="text-success">販売中</span>
 					<% end %>
 				</td>
 			</tr>
