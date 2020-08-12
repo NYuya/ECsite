@@ -1,22 +1,29 @@
-<table class="table table-hover">
-	<tbody>
-        <tr>
-            <div class="item_image">
-                <%= attachment_image_tag @item, :image, size: '200x200',format: "jpeg",fallback: "cake.png" %>
-            </div>
-            <tr><td>商品名</td><td><%= @item.name %></td></tr>
-            <tr><td>商品詳細</td><td><%= @item.description %></td></tr>
-            <tr><td>商品価格</td><td><%= @item.price %> 円</td></tr>
+
+<%= form_with method: :post, model:@cart_item_new,local: true do |f| %>
+    <table class="table table-hover">
+        <tbody>
             <tr>
-                <td></td>
-                <td>
-                    <% if @item.is_sale_status == false %>
-                        <span class="text-success">販売中</span>
-                    <% else %>
-                        <span class="text-danger">販売停止中</span>
-                    <% end %>
-                </td>
+                <div class="item_image">
+                    <%= attachment_image_tag @item, :image, size: '200x200',format: "jpeg",fallback: "cake.png" %>
+                </div>
+                <tr><td>商品名</td><td><%= @item.name %></td></tr>
+                <tr><td>商品詳細</td><td><%= @item.description %></td></tr>
+                <tr><td>商品価格</td><td><%= @item.price %> 円</td></tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <%= f.hidden_field :item_id, value:@item.id %>
+                        <% if @item.is_sale_status == false %>                
+                            <span class="text-danger">売り切れ</span>
+                            <%= link_to "買い物に戻る", items_path, class:"btn btn-success glyphicon glyphicon-shopping-cart pull-right" %>
+                        <% else %>
+                            <span class="text-success">販売中</span>
+                            <p><%= f.select :item_quantity, ['1', '2', '3', '4', '5', '6'], {include_blank: '個数選択'},class: 'sample' %></p>
+                            <%= f.submit"カートに入れる" ,class:"btn btn-primary btn-lg pull-right" %>                 
+                        <% end %>
+                    </td>
+                </tr>
             </tr>
-        </tr>
-	</tbody>
-</table>
+        </tbody>
+    </table>
+<% end %>
