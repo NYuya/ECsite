@@ -4,4 +4,10 @@ class Item < ApplicationRecord
     has_many :orders,dependent: :destroy
     belongs_to :genre
     # validates :is_sale_status, inclusion: {in: [true, false]}
+
+    validates :genre_id, presence: true
+    validates :description, presence: true
+    validates :name, presence: true
+    validates :price, presence: true
+    validates :image, presence: true
 end

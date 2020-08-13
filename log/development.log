@@ -7284,3 +7284,350 @@ Processing by ItemsController#show as HTML
 Completed 200 OK in 491ms (Views: 475.3ms | ActiveRecord: 1.1ms)
 
 
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:7ole/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/items/2" for 10.0.2.2 at 2020-08-13 06:40:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:7
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (12.7ms)
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 776ms (Views: 677.6ms | ActiveRecord: 14.9ms)
+
+
+Started POST "/cart_items" for 10.0.2.2 at 2020-08-13 06:40:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hhug9Mt7xTk3XwznB606CnsHDAWnBGqPvO7Earc5Z1dCOIkOLmWw0c6a0hDkBzi21zr3VAi6x1Be3BX7qO8+3w==", "cart_item"=>{"item_id"=>"2", "item_quantity"=>"1"}, "commit"=>"カートに入れる"}
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:9
+  Rendering cart_items/create.html.erb within layouts/application
+  Rendered cart_items/create.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 277ms (Views: 266.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cart_items" for 10.0.2.2 at 2020-08-13 06:44:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by CartItemsController#index as HTML
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:3
+  Rendering cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (0.6ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  ↳ app/views/cart_items/index.html.erb:31
+  Rendered cart_items/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 1868ms (Views: 1774.3ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2020-08-13 06:44:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:2
+  Rendered items/index.html.erb within layouts/application (743.2ms)
+  [1m[36mCustomer Load (1.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 964ms (Views: 939.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/attachments/bcba69052571f21b7d600bac77367ac93e56eb5f/store/7ff449570f44be302b414ad5d003add38db0cee18cfe37265749ec41d0af/image.jpeg" for 10.0.2.2 at 2020-08-13 06:44:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2020-08-13 06:44:23 +0000] GET "/bcba69052571f21b7d600bac77367ac93e56eb5f/store/7ff449570f44be302b414ad5d003add38db0cee18cfe37265749ec41d0af/image.jpeg" 200 44.6ms
+
+Started GET "/items/2" for 10.0.2.2 at 2020-08-13 06:44:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (1.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:7
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (5.1ms)
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 204ms (Views: 162.5ms | ActiveRecord: 9.4ms)
+
+
+Started POST "/cart_items" for 10.0.2.2 at 2020-08-13 06:44:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l7u8m0++1JR1yonDgLjTImjOJSALX3irc1W7oP3D6+EYcOZVXFIhkKoPcaO7kyEcabWep2H9knnzWdGkjrBXsQ==", "cart_item"=>{"item_id"=>"2", "item_quantity"=>"1"}, "commit"=>"カートに入れる"}
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:9
+  [1m[36mCartItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "cart_items" WHERE "cart_items"."customer_id" = ? AND "cart_items"."item_id" = ? LIMIT ?[0m  [["customer_id", 1], ["item_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cart_items_controller.rb:16
+  [1m[36mCartItem Create (1.6ms)[0m  [1m[32mINSERT INTO "cart_items" ("customer_id", "item_id", "item_quantity", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["customer_id", 1], ["item_id", 2], ["item_quantity", 1], ["created_at", "2020-08-13 06:44:29.008360"], ["updated_at", "2020-08-13 06:44:29.008360"]]
+  ↳ app/controllers/cart_items_controller.rb:16
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cart_items_controller.rb:16
+Redirected to http://localhost:3000/cart_items
+Completed 302 Found in 33ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/cart_items" for 10.0.2.2 at 2020-08-13 06:44:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#index as HTML
+  [1m[36mCustomer Load (1.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:3
+  Rendering cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (0.4ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  ↳ app/views/cart_items/index.html.erb:31
+  Rendered cart_items/index.html.erb within layouts/application (17.5ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `item' for #<CartItem:0x00007ffb2c11fc68>
+Did you mean?  item_id):
+    32:         <tr>
+    33:           <td>
+    34:             <div class="text-center">
+    35:             <%= attachment_image_tag f.item, :image, size: '90x65',format: "jpeg",fallback: "no_image.jpg", class:"img-responsive"%>
+    36:             </div>
+    37:           </td>
+    38:           <td><%= f.item.name %></td>
+  
+app/views/cart_items/index.html.erb:35:in `block in _app_views_cart_items_index_html_erb__994193638699152353_70358376353700'
+app/views/cart_items/index.html.erb:31:in `_app_views_cart_items_index_html_erb__994193638699152353_70358376353700'
+Started GET "/cart_items" for 10.0.2.2 at 2020-08-13 06:46:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#index as HTML
+  [1m[36mCustomer Load (1.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:3
+  Rendering cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (0.4ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  ↳ app/views/cart_items/index.html.erb:31
+  Rendered cart_items/index.html.erb within layouts/application (13.4ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `item' for #<CartItem:0x00007ffb3036c440>
+Did you mean?  item_id):
+    32:         <tr>
+    33:           <td>
+    34:             <div class="text-center">
+    35:             <%= attachment_image_tag f.item, :image, size: '90x65',format: "jpeg", class:"img-responsive"%>
+    36:             </div>
+    37:           </td>
+    38:           <td><%= f.item.name %></td>
+  
+app/views/cart_items/index.html.erb:35:in `block in _app_views_cart_items_index_html_erb__994193638699152353_70358411252440'
+app/views/cart_items/index.html.erb:31:in `_app_views_cart_items_index_html_erb__994193638699152353_70358411252440'
+Started GET "/cart_items" for 10.0.2.2 at 2020-08-13 06:46:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#index as HTML
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:3
+  Rendering cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (0.6ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  ↳ app/views/cart_items/index.html.erb:31
+  Rendered cart_items/index.html.erb within layouts/application (13.7ms)
+Completed 500 Internal Server Error in 100ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `item' for #<CartItem:0x00007ffb28e140f8>
+Did you mean?  item_id):
+    32:         <tr>
+    33:           <td>
+    34:             <div class="text-center">
+    35:             <%= attachment_image_tag f.item, :image, size: '90x65',format: "jpeg",fallback: "no_image.jpg", class:"img-responsive"%>
+    36:             </div>
+    37:           </td>
+    38:           <td><%= f.item.name %></td>
+  
+app/views/cart_items/index.html.erb:35:in `block in _app_views_cart_items_index_html_erb__994193638699152353_70358349785040'
+app/views/cart_items/index.html.erb:31:in `_app_views_cart_items_index_html_erb__994193638699152353_70358349785040'
+Started GET "/items/2" for 10.0.2.2 at 2020-08-13 06:51:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:7
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (7.1ms)
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 1425ms (Views: 1338.6ms | ActiveRecord: 7.4ms)
+
+
+Started POST "/cart_items" for 10.0.2.2 at 2020-08-13 06:51:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gip5wuQuOUwcKBlowfV3BaiI6LjtwJHlKWWgsiavdETeCVA4ATBMpOXtx58iX3W5BLUT6UJ+PDrLV3EjOXktzA==", "cart_item"=>{"item_id"=>"2", "item_quantity"=>"1"}, "commit"=>"カートに入れる"}
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:9
+  [1m[36mCartItem Exists (2.6ms)[0m  [1m[34mSELECT  1 AS one FROM "cart_items" WHERE "cart_items"."customer_id" = ? AND "cart_items"."item_id" = ? LIMIT ?[0m  [["customer_id", 1], ["item_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:10
+  [1m[36mCartItem Load (0.8ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ? AND "cart_items"."item_id" = ? LIMIT ?[0m  [["customer_id", 1], ["item_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cart_items_controller.rb:14
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:14
+  [1m[36mCartItem Update (1.6ms)[0m  [1m[33mUPDATE "cart_items" SET "item_quantity" = ?, "updated_at" = ? WHERE "cart_items"."id" = ?[0m  [["item_quantity", 2], ["updated_at", "2020-08-13 06:51:21.175753"], ["id", 1]]
+  ↳ app/controllers/cart_items_controller.rb:14
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cart_items_controller.rb:14
+Redirected to http://localhost:3000/cart_items
+Completed 302 Found in 60ms (ActiveRecord: 8.9ms)
+
+
+Started GET "/cart_items" for 10.0.2.2 at 2020-08-13 06:51:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#index as HTML
+  [1m[36mCustomer Load (1.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:3
+  Rendering cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (0.5ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  ↳ app/views/cart_items/index.html.erb:31
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cart_items/index.html.erb:35
+  Rendered cart_items/index.html.erb within layouts/application (705.7ms)
+Completed 200 OK in 953ms (Views: 892.0ms | ActiveRecord: 4.3ms)
+
+
+Started PUT "/cart_items/1" for 10.0.2.2 at 2020-08-13 06:51:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oMvqXxvNwcAl4+90/wv8vOZzit8Cxy1bAGXIrYxEOYz86MOl/tO0KNwmMYMcof4ASk5xjq15gITiVxk8k5JgBA==", "cart_item"=>{"item_quantity"=>"1"}, "commit"=>"変更", "id"=>"1"}
+  [1m[36mCartItem Load (0.7ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cart_items_controller.rb:23
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:23
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:23
+  [1m[36mCartItem Update (1.7ms)[0m  [1m[33mUPDATE "cart_items" SET "item_quantity" = ?, "updated_at" = ? WHERE "cart_items"."id" = ?[0m  [["item_quantity", 1], ["updated_at", "2020-08-13 06:51:28.781892"], ["id", 1]]
+  ↳ app/controllers/cart_items_controller.rb:23
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cart_items_controller.rb:23
+Redirected to http://localhost:3000/cart_items
+Completed 302 Found in 32ms (ActiveRecord: 10.2ms)
+
+
+Started GET "/cart_items" for 10.0.2.2 at 2020-08-13 06:51:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#index as HTML
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:3
+  Rendering cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (0.5ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  ↳ app/views/cart_items/index.html.erb:31
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cart_items/index.html.erb:35
+  Rendered cart_items/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 218ms (Views: 203.9ms | ActiveRecord: 1.5ms)
+
+
+Started PUT "/cart_items/1" for 10.0.2.2 at 2020-08-13 06:51:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h3LdU1NA1CzEWWO9az4C0dlQqyJej/CDJnIIncQgLvTbUfSptl6hxD2cvUqIlABtdW1Qc/ExXVzEQNkM2/Z3fA==", "cart_item"=>{"item_quantity"=>"5"}, "commit"=>"変更", "id"=>"1"}
+  [1m[36mCartItem Load (0.7ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cart_items_controller.rb:23
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:23
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:23
+  [1m[36mCartItem Update (1.9ms)[0m  [1m[33mUPDATE "cart_items" SET "item_quantity" = ?, "updated_at" = ? WHERE "cart_items"."id" = ?[0m  [["item_quantity", 5], ["updated_at", "2020-08-13 06:51:34.405451"], ["id", 1]]
+  ↳ app/controllers/cart_items_controller.rb:23
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cart_items_controller.rb:23
+Redirected to http://localhost:3000/cart_items
+Completed 302 Found in 40ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/cart_items" for 10.0.2.2 at 2020-08-13 06:51:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#index as HTML
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:3
+  Rendering cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (0.4ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  ↳ app/views/cart_items/index.html.erb:31
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cart_items/index.html.erb:35
+  Rendered cart_items/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 293ms (Views: 280.8ms | ActiveRecord: 1.8ms)
+
+
+Started PUT "/cart_items/1" for 10.0.2.2 at 2020-08-13 06:51:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gUAvKxGwSbPxyJpnga144s11OsWDGIivTibL26g+wivdYwbR9K48WwgNRJBiB3peYUjBlCymJXCsFBpKt+ibow==", "cart_item"=>{"item_quantity"=>"1"}, "commit"=>"変更", "id"=>"1"}
+  [1m[36mCartItem Load (0.8ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cart_items_controller.rb:23
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:23
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:23
+  [1m[36mCartItem Update (5.6ms)[0m  [1m[33mUPDATE "cart_items" SET "item_quantity" = ?, "updated_at" = ? WHERE "cart_items"."id" = ?[0m  [["item_quantity", 1], ["updated_at", "2020-08-13 06:51:37.927701"], ["id", 1]]
+  ↳ app/controllers/cart_items_controller.rb:23
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cart_items_controller.rb:23
+Redirected to http://localhost:3000/cart_items
+Completed 302 Found in 32ms (ActiveRecord: 9.5ms)
+
+
+Started GET "/cart_items" for 10.0.2.2 at 2020-08-13 06:51:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartItemsController#index as HTML
+  [1m[36mCustomer Load (1.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cart_items_controller.rb:3
+  Rendering cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (0.4ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  ↳ app/views/cart_items/index.html.erb:31
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cart_items/index.html.erb:35
+  Rendered cart_items/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 292ms (Views: 281.8ms | ActiveRecord: 1.9ms)
+
+
