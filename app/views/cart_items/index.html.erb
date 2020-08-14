@@ -52,3 +52,12 @@
       <% end %>
     </tbody>
   </table>
+  <%= link_to "買い物を続ける", items_path, class:"btn btn-primary glyphicon glyphicon-shopping-cart" %>
+  <table class ="table table-bordered" >
+    <thead class="thead thead-light">
+      <tr>
+        <th>合計金額</th><td>¥<%= @sum.to_s(:delimited) %>-</td>
+      </tr>
+    </thead>
+  </table>
+<a href="orders/new" class="btn btn-primary btn-square-shadow glyphicon glyphicon-share-alt">情報入力に進む</a>
