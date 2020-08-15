@@ -22,6 +22,9 @@ class OrdersController < ApplicationController
   end
 
   def confirm
+    @cart_items = current_customer.cart_items.all
+    @order_new = Order.new(order_params)
+    @order_new.customer_id = current_customer.id
   end
 
   def thanks
