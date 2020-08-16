@@ -2,3 +2,44 @@
 <p>Find me in app/views/orders/new.html.erb</p>
 
 <h2>注文情報入力</h2>
+  <%= form_with(model: @order_new, url:orders_confirm_path, local: true) do |f| %>
+    <% if @order_new.errors.any? %>
+      <div class="alert alert-danger">
+        <h2><%= @order_new.errors.count %>errors prohibited this obj from being saved:</h2>
+        <% @order_new.errors.full_messages.each do |message| %>
+          <%= message %>
+        <% end %>
+      </div>
+    <% end %>
+
+    <h4>支払方法</h4>
+      <%= f.radio_button :pay_method, :"クレジットカード" %>
+      <%= f.label :pay_method, "クレジットカード", {value: :クレジットカード, style: "display: inline-block;"} %>
+
+      <%= f.radio_button :pay_method, :"銀行振込" %>
+      <%= f.label :pay_method, "銀行振込", {value: :銀行振込, style: "display: inline-block;"} %>
+
+    <h4>お届け先</h4>
+      <h5><%= radio_button_tag('ship_num',"1") %><%= f.label :ship_num, "ご自身の住所" %></h5>
+      〒<%= current_customer.post_code %><br>
+      <%= current_customer.address %><br>
+      <%= (current_customer.last_name) + (current_customer.first_name) %><br>
+      <!-- shipテーブルに登録している住所 -->
+      <h5><%= radio_button_tag('ship_num',"2") %><%= f.label :ship_num, "登録済住所から選択" %></h5>
+      <%#= select_tag 'ship_id', options_from_collection_for_select(@ship, :id, :view_ship_full, 1) %>
+      
+      <h5><%= radio_button_tag('ship_num',"3") %><%= f.label :ship_num, "新しいお届け先" %></h5>
+      <label for="postcode">郵便番号(ハイフンなし)</label>
+      <%= f.text_field :ship_postcode, id:"postcode" %><br/>
+      <label for="address">住所</label>
+      <%= f.text_field :ship_address, id:"address" %><br/>
+      <label for="name">宛名</label>
+      <%= f.text_field :ship_name, id:"name" %>
+      <!-- current_customers.idをcustomers_idとして送る -->
+      <%= f.hidden_field :customers_id, value:current_customer.id %>
+      <br>
+      <br>
+      <%= f.submit "確認画面" %>
+  <% end %>
+
+
