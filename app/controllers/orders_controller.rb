@@ -5,6 +5,7 @@ class OrdersController < ApplicationController
 
   def new
     @order_new = Order.new
+    @ship = Ship.where(customer_id: current_customer.id)
     @my_cart = current_customer.cart_items
     if @my_cart.empty?
       redirect_to request.referer, notice:'カートが空の状態では注文出来ません'
@@ -22,9 +23,28 @@ class OrdersController < ApplicationController
   end
 
   def confirm
+    @freight = 800
     @cart_items = current_customer.cart_items.all
     @order_new = Order.new(order_params)
     @order_new.customer_id = current_customer.id
+    @pay_method = params[:order][:pay_method]
+      # 自分の配送先
+      if params[:ship_num] == "1"
+        @order_postcode = current_customer.post_code
+        @order_address = current_customer.address
+        @order_name = (current_customer.last_name) + (current_customer.first_name)
+      # 登録済みの配送先
+      elsif params[:ship_num] == "2"
+        @order_postcode = Ship.find(params[:ship_id]).view_ship_code
+        @order_address = Ship.find(params[:ship_id]).view_ship_address
+        @order_name = Ship.find(params[:ship_id]).view_ship_name
+      # 新しい配送先
+      else
+        @order_postcode = params[:order][:ship_postcode]
+        @order_address = params[:order][:ship_address]
+        @order_name = params[:order][:ship_name]
+        render 'orders/new' if @order_new.invalid?
+      end
   end
 
   def thanks
