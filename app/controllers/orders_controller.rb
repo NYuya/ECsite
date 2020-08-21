@@ -1,8 +1,4 @@
 class OrdersController < ApplicationController
-  def index
-    @orders = current_customer.orders.all
-  end
-
   def new
     @order_new = Order.new
     @ship = Ship.where(customer_id: current_customer.id)
@@ -12,14 +8,37 @@ class OrdersController < ApplicationController
     end
   end
 
-  def show
-    @order = Order.find(params[:id])
-    @order_item = @order.order_items
-  end
-
   def create
     @order_new = Order.new(order_params)
-    @order.customer_id = current_customer.id
+    @cart_items = CartItem.where(customer_id: current_customer.id)
+    # カートへ戻る
+      if params[:back].present?
+            render 'cart_items/index'
+        return
+    # 情報入力へ戻る
+      elsif params[:info].present?
+              @ship = Ship.where(customer_id: current_customer.id)
+            render 'orders/new'
+        return
+      end
+      if @order_new.save
+        @cart_items.each do |f|
+          @order_item_new = OrderItem.new
+          @order_item_new.order_id = @order_new.id
+          @order_item_new.item_id = f.item.id
+          @order_item_new.product_status = "製作待ち"
+          @order_item_new.price = f.item.price
+          @order_item_new.quantity = f.item_quantity
+          @order_item_new.name = f.item.name
+          @order_item_new.save
+        end
+          @ship_new = Ship.new(customer_id: current_customer.id, code: params[:order][:ship_postcode],address: params[:order][:ship_address],name: params[:order][:ship_name])
+          @ship_new.save!
+        current_customer.cart_items.destroy_all
+        redirect_to orders_thanks_path
+      else
+        redirect_to new_order_path
+      end
   end
 
   def confirm
@@ -47,7 +66,16 @@ class OrdersController < ApplicationController
       end
   end
 
+  def show
+    @order = Order.find(params[:id])
+    @order_item = @order.order_items
+  end
+
   def thanks
+  end
+
+  def index
+    @orders = current_customer.orders.all
   end
 
   private
