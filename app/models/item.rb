@@ -3,7 +3,7 @@ class Item < ApplicationRecord
     has_many :cart_items, dependent: :destroy
     has_many :orders,dependent: :destroy
     belongs_to :genre
-    # validates :is_sale_status, inclusion: {in: [true, false]}
+    validates :is_sale_status, inclusion: {in: [true, false]}
 
     validates :genre_id, presence: true
     validates :description, presence: true
