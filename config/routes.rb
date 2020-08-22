@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  root to: 'items#top'
+  post 'orders/confirm' => 'orders#confirm'
+  get 'orders/thanks' => 'orders#thanks'
+  delete 'cart_items/destroy_all' => 'cart_items#destroy_all'
 
   devise_for :admins, controllers: {
     sessions: 'admins/sessions'
@@ -19,26 +23,20 @@ Rails.application.routes.draw do
     passwords: 'customers/passwords'
   }
 
-  scope module: :customers do
-      resources :customers, only: [:show, :edit, :update]
-  end
-
   namespace :customers do
       get 'confirm' => 'customers#confirm'
       patch 'hide' => 'customers#hide'
       put 'hide' => 'customers#hide'
   end
 
+  scope module: :customers do
+      resources :customers, only: [:show, :edit, :update]
+  end
+
   resources :cart_items, only: [:index, :create, :update, :destroy]
-  delete 'cart_items/destroy_all' => 'cart_items#destroy_all'
   resources :orders, only: [:index, :new, :show, :create]
-  post 'orders/confirm' => 'orders#confirm'
-  get 'orders/thanks' => 'orders#thanks'
   resources :ships, only: [:index, :create, :edit, :update, :destroy]
   resources :items, only: [:index, :show]
-  root to: 'items#top'
-
-
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
