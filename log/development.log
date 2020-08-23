@@ -13048,3 +13048,228 @@ Processing by Customers::CustomersController#show as HTML
 Completed 200 OK in 193ms (Views: 171.2ms | ActiveRecord: 0.9ms)
 
 
+Completed 200 OK in 312ms (Views: 300.4ms | ActiveRecord: 0.8ms)
+
+
+ "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+200 793.1ms
+
+9 +0000
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             05:52:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/9afe2959117fce3ebf233aa5eee42aa96da6d7ee/store/889c66169b71c07ba7c8d6a82189ae01653d3408d01ab383e5d6c23af345/image.jpeg" for 10.0.2.2 at 2020-08-23 05:52:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2020-08-23 05:52:19 +0000] GET "/bcba69052571f21b7d600bac77367ac93e56eb5f/store/7ff449570f44be302b414ad5d003add38db0cee18cfe37265749ec41d0af/image.jpeg" 200 398.5ms
+
+Started GET "/attachments/ed8ca2e535e3734d35b7e6e2e687e59cfc07f305/store/0be4982dd2e32e01a4bd57f3fc36e2f523e0b6d5a85cc0bc497352b7e765/image.jpeg" for 10.0.2.2 at 2020-08-23 05:52:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2020-08-23 05:52:20 +0000] GET "/9afe2959117fce3ebf233aa5eee42aa96da6d7ee/store/889c66169b71c07ba7c8d6a82189ae01653d3408d01ab383e5d6c23af345/image.jpeg" 200 558.7ms
+
+Refile::App: [2020-08-23 05:52:20 +0000] GET "/ed8ca2e535e3734d35b7e6e2e687e59cfc07f305/store/0be4982dd2e32e01a4bd57f3fc36e2f523e0b6d5a85cc0bc497352b7e765/image.jpeg" 200 793.1ms
+
+Started GET "/admins/orders" for 10.0.2.2 at 2020-08-23 06:45:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::OrdersController#index as HTML
+  Rendering admins/orders/index.html.erb within layouts/application
+  Rendered admins/orders/index.html.erb within layouts/application (2.0ms)
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+Completed 200 OK in 635ms (Views: 591.9ms | ActiveRecord: 35.3ms)
+
+
+Started GET "/admins/customers" for 10.0.2.2 at 2020-08-23 06:45:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::CustomersController#index as HTML
+  Rendering admins/customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (1.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/views/admins/customers/index.html.erb:14
+  Rendered admins/customers/index.html.erb within layouts/application (5.5ms)
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+Completed 200 OK in 364ms (Views: 352.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/admins/items" for 10.0.2.2 at 2020-08-23 06:45:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::ItemsController#index as HTML
+  Rendering admins/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/admins/items/index.html.erb:17
+  Rendered admins/items/index.html.erb within layouts/application (5.8ms)
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+Completed 200 OK in 931ms (Views: 924.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admins/orders" for 10.0.2.2 at 2020-08-23 13:27:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::OrdersController#index as HTML
+  Rendering admins/orders/index.html.erb within layouts/application
+  Rendered admins/orders/index.html.erb within layouts/application (0.4ms)
+  [1m[36mAdmin Load (2.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+Completed 200 OK in 650ms (Views: 639.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/admins/orders" for 10.0.2.2 at 2020-08-23 13:28:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::OrdersController#index as HTML
+  Rendering admins/orders/index.html.erb within layouts/application
+  Rendered admins/orders/index.html.erb within layouts/application (0.4ms)
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+Completed 200 OK in 325ms (Views: 310.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admins/customers" for 10.0.2.2 at 2020-08-23 13:28:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::CustomersController#index as HTML
+  Rendering admins/customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (2.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/views/admins/customers/index.html.erb:14
+  Rendered admins/customers/index.html.erb within layouts/application (8.2ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+Completed 200 OK in 605ms (Views: 586.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/admins/items" for 10.0.2.2 at 2020-08-23 13:28:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::ItemsController#index as HTML
+  Rendering admins/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/admins/items/index.html.erb:17
+  Rendered admins/items/index.html.erb within layouts/application (5.4ms)
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+Completed 200 OK in 232ms (Views: 170.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admins/orders" for 10.0.2.2 at 2020-08-23 13:28:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::OrdersController#index as HTML
+  Rendering admins/orders/index.html.erb within layouts/application
+  Rendered admins/orders/index.html.erb within layouts/application (1.1ms)
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+Completed 200 OK in 274ms (Views: 255.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admins/genres" for 10.0.2.2 at 2020-08-23 13:28:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::GenresController#index as HTML
+  Rendering admins/genres/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.8ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/admins/genres/index.html.erb:42
+  Rendered admins/genres/index.html.erb within layouts/application (8.5ms)
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+Completed 200 OK in 196ms (Views: 174.7ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/admins/orders" for 10.0.2.2 at 2020-08-23 13:28:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::OrdersController#index as HTML
+  Rendering admins/orders/index.html.erb within layouts/application
+  Rendered admins/orders/index.html.erb within layouts/application (0.8ms)
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+Completed 200 OK in 312ms (Views: 300.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admins/orders" for 10.0.2.2 at 2020-08-23 13:30:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Admins::OrdersController#index as HTML
+  Rendering admins/orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (1.9ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admins/orders/index.html.erb:15
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admins/orders/index.html.erb:18
+  [1m[36mOrderItem Load (1.1ms)[0m  [1m[34mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = ?[0m  [["order_id", 1]]
+  ↳ app/views/admins/orders/index.html.erb:21
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admins/orders/index.html.erb:18
+  [1m[36mOrderItem Load (0.8ms)[0m  [1m[34mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = ?[0m  [["order_id", 2]]
+  ↳ app/views/admins/orders/index.html.erb:21
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admins/orders/index.html.erb:18
+  [1m[36mOrderItem Load (0.9ms)[0m  [1m[34mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = ?[0m  [["order_id", 3]]
+  ↳ app/views/admins/orders/index.html.erb:21
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admins/orders/index.html.erb:18
+  [1m[36mOrderItem Load (0.4ms)[0m  [1m[34mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = ?[0m  [["order_id", 4]]
+  ↳ app/views/admins/orders/index.html.erb:21
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admins/orders/index.html.erb:18
+  [1m[36mOrderItem Load (1.5ms)[0m  [1m[34mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = ?[0m  [["order_id", 5]]
+  ↳ app/views/admins/orders/index.html.erb:21
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admins/orders/index.html.erb:18
+  [1m[36mOrderItem Load (1.3ms)[0m  [1m[34mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = ?[0m  [["order_id", 6]]
+  ↳ app/views/admins/orders/index.html.erb:21
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admins/orders/index.html.erb:18
+  [1m[36mOrderItem Load (0.4ms)[0m  [1m[34mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = ?[0m  [["order_id", 7]]
+  ↳ app/views/admins/orders/index.html.erb:21
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admins/orders/index.html.erb:18
+  [1m[36mOrderItem Load (0.8ms)[0m  [1m[34mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = ?[0m  [["order_id", 8]]
+  ↳ app/views/admins/orders/index.html.erb:21
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admins/orders/index.html.erb:18
+  [1m[36mOrderItem Load (1.2ms)[0m  [1m[34mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = ?[0m  [["order_id", 9]]
+  ↳ app/views/admins/orders/index.html.erb:21
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admins/orders/index.html.erb:18
+  [1m[36mOrderItem Load (0.4ms)[0m  [1m[34mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = ?[0m  [["order_id", 10]]
+  ↳ app/views/admins/orders/index.html.erb:21
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admins/orders/index.html.erb:18
+  [1m[36mOrderItem Load (0.5ms)[0m  [1m[34mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = ?[0m  [["order_id", 11]]
+  ↳ app/views/admins/orders/index.html.erb:21
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admins/orders/index.html.erb:18
+  [1m[36mOrderItem Load (2.5ms)[0m  [1m[34mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = ?[0m  [["order_id", 12]]
+  ↳ app/views/admins/orders/index.html.erb:21
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admins/orders/index.html.erb:18
+  [1m[36mOrderItem Load (0.5ms)[0m  [1m[34mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = ?[0m  [["order_id", 13]]
+  ↳ app/views/admins/orders/index.html.erb:21
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admins/orders/index.html.erb:18
+  [1m[36mOrderItem Load (0.4ms)[0m  [1m[34mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = ?[0m  [["order_id", 14]]
+  ↳ app/views/admins/orders/index.html.erb:21
+  Rendered admins/orders/index.html.erb within layouts/application (194.3ms)
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+Completed 200 OK in 1790ms (Views: 1743.7ms | ActiveRecord: 24.8ms)
+
+
+Started GET "/admins/orders/14" for 10.0.2.2 at 2020-08-23 13:30:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::OrdersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mOrder Load (1.5ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/admins/orders_controller.rb:7
+  Rendering admins/orders/show.html.erb within layouts/application
+  Rendered admins/orders/show.html.erb within layouts/application (0.5ms)
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+Completed 200 OK in 210ms (Views: 194.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/admins/orders/10" for 10.0.2.2 at 2020-08-23 13:30:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::OrdersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mOrder Load (0.8ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/admins/orders_controller.rb:7
+  Rendering admins/orders/show.html.erb within layouts/application
+  Rendered admins/orders/show.html.erb within layouts/application (0.7ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+Completed 200 OK in 184ms (Views: 173.6ms | ActiveRecord: 1.4ms)
+
+
